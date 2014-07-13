@@ -153,16 +153,38 @@ par( mfcol = c(2,2))
 with( firstTwoDaysFeb2007, plot( x=datetime, y=Global_active_power,
       type="l",
       xlab="",
-      ylab="Global Active Power (kilowatts)") )
+      ylab="Global Active Power") )
 with( firstTwoDaysFeb2007, plot(x=datetime,y=Sub_metering_1,
                                 type="l",
                                 xlab="",
                                 ylab="Energy sub metering"))
 lines(x=firstTwoDaysFeb2007$datetime,y=firstTwoDaysFeb2007$Sub_metering_2,type="l",col="red")
 lines(x=firstTwoDaysFeb2007$datetime,y=firstTwoDaysFeb2007$Sub_metering_3,type="l",col="blue")
-legend(x="topright",legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),lty=1, col=c("black","red","blue"))
+legend(x="topright",legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),bty="n",lty=1, col=c("black","red","blue"))
 with(firstTwoDaysFeb2007,plot(x=datetime,y=Voltage,type="l") )
 with( firstTwoDaysFeb2007,plot(x=datetime,y=Global_reactive_power,type="l"))
 ```
 
 ![plot of chunk fourth plot](figure/fourth plot.png) 
+
+The final four R files:
+
+* plot1.R
+* plot2.R
+* plot3.R
+* plot4.R
+
+used most of the code presented here but 
+were written with the intention that each could be executed
+separately to generate the respective png file:
+
+* plot1.png
+* plot2.png
+* plot3.png
+* plot4.png
+
+Specially the font of the legend of the **Energy sub metering** plot had
+to be adjusted due to the 480 by 480 pixel size restriction of the file. 
+This was achieved with **cex=0.8** as parameter to **legend**, effectively
+setting the legend font size to 80% of the default font size for the rest of the plot.
+

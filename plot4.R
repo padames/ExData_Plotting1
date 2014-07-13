@@ -47,7 +47,7 @@ with( firstTwoDaysFeb2007, plot(x=datetime,y=Sub_metering_1,
 lines(x=firstTwoDaysFeb2007$datetime,y=firstTwoDaysFeb2007$Sub_metering_2,type="l",col="red")
 lines(x=firstTwoDaysFeb2007$datetime,y=firstTwoDaysFeb2007$Sub_metering_3,type="l",col="blue")
 legend(x="top",legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),
-       cex=0.5, # to make the font size legible and within the subplot frame
+       cex=0.8, # to make the font size legible and within the subplot frame
        bty="n",lty=1, col=c("black","red","blue"))
 
 # top right
