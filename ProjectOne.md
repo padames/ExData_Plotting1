@@ -188,3 +188,4 @@ to be adjusted due to the 480 by 480 pixel size restriction of the file.
 This was achieved with **cex=0.8** as parameter to **legend**, effectively
 setting the legend font size to 80% of the default font size for the rest of the plot.
 
+Padames
